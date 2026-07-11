@@ -1,0 +1,39 @@
+// app.rc - MCPACK Injector バージョンリソース
+// VS_VERSIONINFO のみ定義 (ASCII文字のみ使用)
+// メニュー・ダイアログはコード内で動的に生成している
+
+#include <windows.h>
+#include "..\src\resource.h"
+
+// ============================================================
+// バージョン情報リソース
+// ============================================================
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    VER_MAJOR, VER_MINOR, VER_PATCH, VER_BUILD
+PRODUCTVERSION VER_MAJOR, VER_MINOR, VER_PATCH, VER_BUILD
+FILEFLAGSMASK  0x3fL
+FILEFLAGS      0x0L
+FILEOS         VOS__WINDOWS32
+FILETYPE       VFT_APP
+FILESUBTYPE    0x0L
+
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104B0"
+        BEGIN
+            VALUE "CompanyName",      "soramame72"
+            VALUE "FileDescription",  "MCPACK Injector - Minecraft Bedrock Pack Installer"
+            VALUE "FileVersion",      VER_STRING
+            VALUE "InternalName",     "MCPACK_Injector"
+            VALUE "LegalCopyright",   "(C) 2026 soramame72"
+            VALUE "OriginalFilename", "MCPACK_Injector.exe"
+            VALUE "ProductName",      "MCPACK Injector"
+            VALUE "ProductVersion",   VER_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0411, 0x04B0
+    END
+END
